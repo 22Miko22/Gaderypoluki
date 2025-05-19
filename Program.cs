@@ -1,4 +1,4 @@
-﻿using Gaderypoluki;
+﻿using Szyfry;
 
 Console.WriteLine("Podaj tekst do zakodowania: ");
 //readline zawsze zwraca string - nawet jeśli wpiszecie jedną literę
