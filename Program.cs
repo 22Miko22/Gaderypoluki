@@ -2,7 +2,7 @@
 
 Console.WriteLine("Wybierz metodę szyfrowania:  ");
 Console.WriteLine("1 - Gaderypoluki");
-Console.WriteLine("2 - Szyfr słownikowy");
+Console.WriteLine("2 - Szyfr Caesara");
 
 string method = Console.ReadLine();
 
@@ -17,7 +17,7 @@ if (method == "1")
 }
 else if (method == "2")
 {
-  output = Cypher.DictionaryCaesar(text);
+  output = Cypher.CaesarShift(text);
 }
 else 
 {
