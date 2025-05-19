@@ -1,10 +1,27 @@
 ﻿using Szyfry;
 
-Console.WriteLine("Podaj tekst do zakodowania: ");
-//readline zawsze zwraca string - nawet jeśli wpiszecie jedną literę
+Console.WriteLine("Wybierz metodę szyfrowania:  ");
+Console.WriteLine("1 - Gaderypoluki");
+Console.WriteLine("2 - Szyfr słownikowy");
+
+string method = Console.ReadLine();
+
+Console.WriteLine("Podaj texst do zakodowania: ");
 string text = Console.ReadLine();
 
-//wywołujemy metodę statyczną klasy Cypher
-string output = Cypher.Gaderypoluki(text);
-//wypisujemy wynik
+string output = "";
+
+if (method == "1")
+{
+  output = Cyber.Gaderypoluki(text);
+}
+else if (method == "2")
+{
+  output = Cypher.DictionaryCaesar(text);
+}
+else 
+{
+  Console.WriteLine("Niepoprawny wybór metody. ");
+}
+
 Console.WriteLine("Zaszyfrowany tekst: " + output);
